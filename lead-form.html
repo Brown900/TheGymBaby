@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Me Your Dreams</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section lead-form-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h1 class="section-title">Tell Me Your Dreams &amp; Desires — Let's Make It Happen</h1>
+                    <p class="section-subtitle">Share your goals so I can design the perfect plan for your transformation.</p>
+                </div>
+            </div>
+            <div class="lead-form-box">
+                <form class="lead-form" method="post" action="/submit-lead">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goals">Tell Me Your Dreams &amp; Desires</label>
+                        <textarea id="goals" name="goals" rows="6" placeholder="What do you want to achieve?" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="social">Social Media Handle (optional)</label>
+                        <input type="text" id="social" name="social" placeholder="@yourhandle">
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">When are you ready to get started?</label>
+                        <select id="start-date" name="start-date" required>
+                            <option value="">Select an option</option>
+                            <option value="immediately">Immediately</option>
+                            <option value="next_week">Within the next week</option>
+                            <option value="next_month">Within the next month</option>
+                            <option value="not_sure">Not sure yet</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-button large">Send My Info</button>
+                </form>
+            </div>
+            <div class="centered" style="margin-top: 30px;">
+                <a href="index.html" class="cta-button secondary">Back to Home</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

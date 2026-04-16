@@ -1,0 +1,14 @@
+{
+  "name": "pippit-fitness-website",
+  "version": "1.0.0",
+  "description": "Fitness website with lead capture backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.4",
+    "nodemailer": "^6.9.5"
+  }
+}
