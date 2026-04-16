@@ -212,72 +212,6 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 600px;
 }
 
-/* Image Uploader */
-.image-uploader {
-    margin-top: 30px;
-    padding: 25px;
-    background-color: var(--white);
-    border-radius: 15px;
-    box-shadow: var(--box-shadow);
-    border: 2px dashed var(--gray-light);
-}
-
-.image-uploader h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--dark-color);
-}
-
-.image-uploader p {
-    color: var(--text-light);
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-}
-
-#image-upload {
-    display: none;
-}
-
-.upload-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 12px 24px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.upload-button:hover {
-    background-color: #4c51bf;
-    transform: translateY(-2px);
-}
-
-.upload-button i {
-    font-size: 20px;
-}
-
-.upload-status {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 600;
-}
-
-.upload-status.success {
-    background-color: #c6f6d5;
-    color: #22543d;
-}
-
-.upload-status.error {
-    background-color: #fed7d7;
-    color: #742a2a;
-}
 
 /* Section Styles */
 .section {
@@ -766,8 +700,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
     }
 
-    .feature-card,
-    .image-uploader {
+    .feature-card {
         padding: 25px 20px;
     }
 }

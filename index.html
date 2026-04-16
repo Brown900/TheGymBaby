@@ -35,10 +35,6 @@
             </div>
             <div class="hero-image-container">
                 <img id="main-hero-image" src="main-pic.png" alt="The Gym Baby" class="hero-image">
-                <div class="image-uploader">
-                    <input type="file" id="image-upload" accept="image/*" style="display:none">
-                    <div id="upload-status" class="upload-status"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -171,66 +167,5 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Image Uploader -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const uploadBtn = document.getElementById('upload-btn');
-            const imageUpload = document.getElementById('image-upload');
-            const mainImage = document.getElementById('main-hero-image');
-            const uploadStatus = document.getElementById('upload-status');
-
-            uploadBtn.addEventListener('click', function() {
-                imageUpload.click();
-            });
-
-            imageUpload.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (!file) return;
-
-                if (!file.type.match('image.*')) {
-                    uploadStatus.textContent = 'Please select an image file (JPEG, PNG, etc.)';
-                    uploadStatus.className = 'upload-status error';
-                    return;
-                }
-
-                if (file.size > 5 * 1024 * 1024) {
-                    uploadStatus.textContent = 'Image size must be less than 5MB';
-                    uploadStatus.className = 'upload-status error';
-                    return;
-                }
-
-                const reader = new FileReader();
-
-                reader.onload = function(e) {
-                    mainImage.src = e.target.result;
-                    uploadStatus.textContent = 'Image uploaded successfully!';
-                    uploadStatus.className = 'upload-status success';
-                    imageUpload.value = '';
-
-                    try {
-                        localStorage.setItem('customHeroImage', e.target.result);
-                    } catch (err) {
-                        console.log('LocalStorage not available for image storage');
-                    }
-                };
-
-                reader.onerror = function() {
-                    uploadStatus.textContent = 'Error reading image file';
-                    uploadStatus.className = 'upload-status error';
-                };
-
-                reader.readAsDataURL(file);
-            });
-
-            try {
-                const savedImage = localStorage.getItem('customHeroImage');
-                if (savedImage) {
-                    mainImage.src = savedImage;
-                }
-            } catch (err) {
-                // localStorage not available or error
-            }
-        });
-    </script>
 </body>
 </html>
